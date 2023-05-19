@@ -1,12 +1,25 @@
 #include<stdio.h>
 int main()
 {
-    int a,b,i; 
-    scanf("%d%d",&a,&b); 
-    for(i=1;i<=a*b;i++)
+    int a,b,x,y,i,p;
+    scanf("%d%d",&a,&b);
+    if(a>b)
     {
-        if(i%a==0 && i%b==0)
-        break;
-        }
-        printf("%d",i);
+        x=a;
+        y=b;
+    }
+    else
+    {
+        x=b;
+        y=a;
+    }
+    for(i=1;i<x*b;i++)
+    {
+        p = x*i;
+        if(p%y==0)
+        {
+            printf("%d",p);
+            break;
+ }
+}
 }
